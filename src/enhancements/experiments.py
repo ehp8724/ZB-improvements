@@ -181,6 +181,18 @@ def stage_exec(ctx: Ctx):
             res = run_sim(ctx, W, aum=1e7, **kw)
             sens.append({"strategy": name, "variant": label, **perf(res)})
     write_json("exec_sensitivity.json", sens)
+    # low-fee regime: with a 2 bp fee (maker/VIP-like) execution costs are no longer drowned
+    # by commission, so the algorithms can be ranked on an active strategy
+    low = []
+    for name in ("eiie", "momentum_1d", "reversal_3h", "eiie_costblind"):
+        if not have_w(name):
+            continue
+        W = load_w(name)
+        for mode in ("instant", "twap", "vwap", "is"):
+            for aum in (1e6, 1e7):
+                res = run_sim(ctx, W, mode=mode, aum=aum, fee=0.0002)
+                low.append({"strategy": name, "mode": mode, "aum": aum, **perf(res)})
+    write_json("exec_lowfee.json", low)
 
 
 # ---------------------------------------------------------------- enhancement 2: SAC
@@ -233,8 +245,8 @@ def _universe(ctx, kind, freq="MS"):
     return rank_universe(ctx.bars, K_UNIV, freq=freq)
 
 
-def stage_universe(ctx: Ctx, seeds=(0, 1, 2), steps=80_000, kinds=("fixed", "dyn")):
-    for kind in kinds:
+def stage_universe(ctx: Ctx, seeds=(0, 1, 2), steps=80_000, variants=None):
+    for kind in (variants or ("fixed", "dyn")):
         A = _universe(ctx, kind)
         if kind == "dyn":
             write_json("universe_changes.json",

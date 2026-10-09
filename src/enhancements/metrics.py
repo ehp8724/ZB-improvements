@@ -16,7 +16,9 @@ def perf(res: SimResult) -> dict:
     mdd = float((1 - np.r_[1.0, w] / peak).max())
     years = len(r) / PPY
     sd = r.std() + 1e-15
+    traded = float((res.turnover * res.equity[:-1]).sum())
     return {
+        "slippage_bps_per_traded": float(res.slip.sum() / max(traded, 1e-9) * 1e4),
         "fapv": float(w[-1]),
         "total_return_pct": float((w[-1] - 1) * 100),
         "ann_return_pct": float((w[-1] ** (1 / years) - 1) * 100) if w[-1] > 0 else -100.0,
