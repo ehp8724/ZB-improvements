@@ -1,0 +1,10 @@
+{
+  "symbol": "BNBUSDT",
+  "month": "2021-12",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/BNBUSDT/1m/BNBUSDT-1m-2021-12.zip",
+  "archive_sha256": "e85384d3a55a536d79692de68da93d9005ae6d10db57d447990b0cc2bee35ab1",
+  "parquet_sha256": "b061c0350c00560543233fdeff785cdffc5dc04acf29cd4714a471b3cc793096",
+  "rows": 44640,
+  "first": "2021-12-01 00:00:00+00:00",
+  "last": "2021-12-31 23:59:00+00:00"
+}

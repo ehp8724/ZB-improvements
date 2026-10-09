@@ -1,0 +1,10 @@
+{
+  "symbol": "ETHUSDT",
+  "month": "2023-11",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-11.zip",
+  "archive_sha256": "b3a5ba98d81b4bc62022d35d85d4e28c6ab7ca550d8283643191f66f6f986c66",
+  "parquet_sha256": "6a97a4e43e986e8a18043fc75ee37bbe95ae5da3978bded2678fbc6afb024e2c",
+  "rows": 43200,
+  "first": "2023-11-01 00:00:00+00:00",
+  "last": "2023-11-30 23:59:00+00:00"
+}

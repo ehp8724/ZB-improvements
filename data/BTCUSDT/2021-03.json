@@ -1,0 +1,10 @@
+{
+  "symbol": "BTCUSDT",
+  "month": "2021-03",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2021-03.zip",
+  "archive_sha256": "54387ec23e27440b220c693b94e97c21dbb3a82d3b7606fd8cfe9f40a69cc85b",
+  "parquet_sha256": "939bd9c85806a5882be5bb491291addb679b6f07732b64b1f6cda736f6994ae6",
+  "rows": 44550,
+  "first": "2021-03-01 00:00:00+00:00",
+  "last": "2021-03-31 23:59:00+00:00"
+}

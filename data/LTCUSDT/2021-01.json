@@ -1,0 +1,10 @@
+{
+  "symbol": "LTCUSDT",
+  "month": "2021-01",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/LTCUSDT/1m/LTCUSDT-1m-2021-01.zip",
+  "archive_sha256": "cc589977222709bcca8d1453c5b196831b11097e15ec86d3a9f767e7d7b18ad1",
+  "parquet_sha256": "89164db700de5b05011dc20eeb8dca5db9077bf0062bbc0b35d79561fe3fe3a4",
+  "rows": 44640,
+  "first": "2021-01-01 00:00:00+00:00",
+  "last": "2021-01-31 23:59:00+00:00"
+}

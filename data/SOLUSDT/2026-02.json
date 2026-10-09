@@ -1,0 +1,10 @@
+{
+  "symbol": "SOLUSDT",
+  "month": "2026-02",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1m/SOLUSDT-1m-2026-02.zip",
+  "archive_sha256": "acfd300f0eabe9f1485e121222d67a03da180c539bd9e43b2afacc602f631120",
+  "parquet_sha256": "8ccc6ccf9049c679be6703a02a1630672cb5113ac073e44e593fa2e0498ae2b9",
+  "rows": 40320,
+  "first": "2026-02-01 00:00:00+00:00",
+  "last": "2026-02-28 23:59:00+00:00"
+}

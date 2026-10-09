@@ -1,0 +1,10 @@
+{
+  "symbol": "AVAXUSDT",
+  "month": "2022-06",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/AVAXUSDT/1m/AVAXUSDT-1m-2022-06.zip",
+  "archive_sha256": "10fdb6121cc78747f7c2304fbc88e82b6bc63cd77620827211db7d83628d923c",
+  "parquet_sha256": "0bd1a335f565872708516d294bfaba4fdd91916c3db9158548873eca6400c239",
+  "rows": 43200,
+  "first": "2022-06-01 00:00:00+00:00",
+  "last": "2022-06-30 23:59:00+00:00"
+}

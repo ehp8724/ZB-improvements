@@ -1,0 +1,10 @@
+{
+  "symbol": "LINKUSDT",
+  "month": "2025-11",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/LINKUSDT/1m/LINKUSDT-1m-2025-11.zip",
+  "archive_sha256": "d4c98a9b775960b06cbec4aee5e9c435e8534e674e214105d3971183b1b3be1d",
+  "parquet_sha256": "f72d8a1b09c2ca12abac28e79a6e98c60e8121bbf015d1998a72233c63254fe9",
+  "rows": 43200,
+  "first": "2025-11-01 00:00:00+00:00",
+  "last": "2025-11-30 23:59:00+00:00"
+}

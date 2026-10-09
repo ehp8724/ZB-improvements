@@ -1,0 +1,10 @@
+{
+  "symbol": "XRPUSDT",
+  "month": "2022-09",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2022-09.zip",
+  "archive_sha256": "a529d48a7826f5adac1f8a6f06549718d04fdf463783db7ead7134ae6a69bb04",
+  "parquet_sha256": "06aa8549874ae474a2cbb1d7c3b0bc34fcda44a3d5502c10a6f10691dc80ea48",
+  "rows": 43200,
+  "first": "2022-09-01 00:00:00+00:00",
+  "last": "2022-09-30 23:59:00+00:00"
+}

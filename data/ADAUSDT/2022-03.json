@@ -1,0 +1,10 @@
+{
+  "symbol": "ADAUSDT",
+  "month": "2022-03",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/ADAUSDT/1m/ADAUSDT-1m-2022-03.zip",
+  "archive_sha256": "7fcdca6d8f7616daa731680475e3e87aa372ca39f8e5d2ea12cefa4bc87e88af",
+  "parquet_sha256": "1f9f7dd9d33143fd57cb5f6f99d41429353b10b335f930dc7756b2c91af69ea9",
+  "rows": 44640,
+  "first": "2022-03-01 00:00:00+00:00",
+  "last": "2022-03-31 23:59:00+00:00"
+}

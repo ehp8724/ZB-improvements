@@ -1,0 +1,10 @@
+{
+  "symbol": "DOGEUSDT",
+  "month": "2021-03",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/DOGEUSDT/1m/DOGEUSDT-1m-2021-03.zip",
+  "archive_sha256": "f08fad423c7e775a5e6765665d10db6579579c3b2b0ae86f0b2e0056a13a1f07",
+  "parquet_sha256": "7c11b1ed9ff2bae707b05978b245d86527dda64ae5ab63cc37f417778f17ebf0",
+  "rows": 44550,
+  "first": "2021-03-01 00:00:00+00:00",
+  "last": "2021-03-31 23:59:00+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "symbol": "LTCUSDT",
+  "month": "2023-09",
+  "url": "https://data.binance.vision/data/spot/monthly/klines/LTCUSDT/1m/LTCUSDT-1m-2023-09.zip",
+  "archive_sha256": "76eb68b329dcf6ddef8da380cb9bcdc085d9ac37dd4b400b70252dd8259ed2dd",
+  "parquet_sha256": "3ca52455fff51c90eb30c9d5065ca2ecefab8dd7e98aed4b7849e1612372a5f6",
+  "rows": 43200,
+  "first": "2023-09-01 00:00:00+00:00",
+  "last": "2023-09-30 23:59:00+00:00"
+}
