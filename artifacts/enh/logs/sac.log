@@ -1,0 +1,12 @@
+01:10:56 [sac] seed 0
+/home/user/ZB-improvements/src/enhancements/train.py:253: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  hist.append({"steps": steps_done, **ev, "alpha": float(log_alpha.exp()),
+01:12:28   sac steps   40960 val fAPV 1.7991 sharpe +1.23 turn 0.000 alpha 0.428 kappa 32 (91s)
+01:13:55   sac steps   81920 val fAPV 1.7996 sharpe +1.23 turn 0.000 alpha 0.184 kappa 20 (179s)
+01:15:24   sac steps  122880 val fAPV 1.8010 sharpe +1.23 turn 0.000 alpha 0.082 kappa 15 (268s)
+01:16:54   sac steps  163840 val fAPV 1.7924 sharpe +1.23 turn 0.000 alpha 0.038 kappa 13 (358s)
+01:18:24   sac steps  204800 val fAPV 1.6546 sharpe +1.23 turn 0.000 alpha 0.018 kappa 15 (447s)
+01:19:54   sac steps  245760 val fAPV 1.2518 sharpe +1.15 turn 0.000 alpha 0.013 kappa 29 (538s)
+01:21:22   sac steps  286720 val fAPV 1.2029 sharpe +1.14 turn 0.000 alpha 0.028 kappa 43 (626s)
+01:22:01 [sac] seed 1

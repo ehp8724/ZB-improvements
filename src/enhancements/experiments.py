@@ -320,8 +320,11 @@ def stage_main(ctx: Ctx):
     for name in MAIN:
         if not have_w(name):
             continue
-        res = run_sim(ctx, load_w(name), mode="instant", aum=1e6)
-        rows.append({"strategy": name, **perf(res)})
+        Wn = load_w(name)
+        res = run_sim(ctx, Wn, mode="instant", aum=1e6)
+        # time-variation of the chosen weights: ~0 means the policy collapsed to a constant mix
+        rows.append({"strategy": name, **perf(res),
+                     "weight_time_std": float(Wn[:, 1:].std(axis=0).mean())})
         curves[name] = res.wealth[47::48]
     write_json("main_table.json", rows)
     days = ctx.bars.time[ctx.a : ctx.a + ctx.n_test][47::48]
