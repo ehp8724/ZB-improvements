@@ -130,7 +130,7 @@ def stage_benchmarks(ctx: Ctx):
         "ubah": bm.ubah(close[a : a + T]),
         "ucrp": bm.ucrp(T, m),
         "btc_hold": bm.single(T, m, 0),
-        "best_stock_hindsight": bm.best_stock(cut),
+        "best_stock_hindsight": bm.best_stock(cut)[:T],
         "momentum_1d": bm.rank_strategy(close, a, T, 48, 3, +1, hold=48),
         "reversal_3h": bm.rank_strategy(close, a, T, 6, 3, -1, hold=1),
     }
@@ -290,7 +290,11 @@ def _crash_market(mkt: Market, j: int, when: str, hours: int = 6, floor: float =
 def stage_stress(ctx: Ctx, when="2025-06-01", seed=None):
     """Delisting stress test: fixed-universe vs periodically re-ranked universe (monthly, weekly)."""
     Af = _universe(ctx, "fixed")
-    j = int(Af[0][np.argsort(ctx.bars.qvol[: ctx.sp["train_end"]].sum(0)[Af[0]])[0]])  # least liquid held coin
+    # crash the least-liquid coin that BOTH the fixed set and the re-ranked set hold at that date
+    t_c = int(ctx.bars.time.searchsorted(pd.Timestamp(when, tz="UTC")))
+    common = sorted(set(Af[t_c]) & set(rank_universe(ctx.bars, K_UNIV)[t_c]))
+    liq = ctx.bars.qvol[t_c - 30 * 48 : t_c].sum(0)
+    j = int(min(common, key=lambda i: liq[i]))
     log(f"crash {ctx.mkt.symbols[j]} at {when}")
     mk2 = _crash_market(ctx.mkt, j, when)
     bars2 = mk2.bars(); win2 = Windows(bars2)
@@ -340,7 +344,7 @@ def stage_main(ctx: Ctx):
         curves[name] = res.wealth[47::48]
     write_json("main_table.json", rows)
     days = ctx.bars.time[ctx.a : ctx.a + ctx.n_test][47::48]
-    np.savez_compressed(OUT / "equity_curves.npz", days=np.array(days.astype(str)),
+    np.savez_compressed(OUT / "equity_curves.npz", days=np.array([str(d) for d in days], dtype="U40"),
                         **{k: v for k, v in curves.items()})
     for r in rows:
         log(f"{r['strategy']:22s} fAPV {r['fapv']:.4f}  Sharpe {r['sharpe']:+.2f}  "
