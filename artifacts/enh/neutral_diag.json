@@ -1,0 +1,13 @@
+{
+  "commission 0.0 (no cost term in training)": {
+    "val_fapv_at_25bp": 7.98613327788189e-05,
+    "turnover_per_bar": 0.2299767,
+    "avg_gross": 1.1175
+  },
+  "commission 0.0025": {
+    "val_fapv_at_25bp": 1.0,
+    "turnover_per_bar": 3.3e-14,
+    "avg_gross": 3.3e-14
+  },
+  "note": "dollar-neutral long/short EIIE, 40k steps, lr 3e-4, one seed; evaluated on 2024 validation"
+}
